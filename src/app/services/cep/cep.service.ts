@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, Observable } from 'rxjs';
 import { Address } from 'src/app/models/address.model';
 
 @Injectable({
@@ -12,9 +11,21 @@ export class CepService {
 
   constructor(private http: HttpClient) {}
 
+  processCep(cep: string): string {
+    let cleanCep = cep.replace(/\D/g, '');
+
+    if (cleanCep.length > 8) {
+      cleanCep = cleanCep.substring(0, 8);
+    }
+
+    return cleanCep;
+  }
+
   searchCep(cep: string): Observable<Address> {
-    return this.http.get<Address>(`${this.API_URL}/${cep}/json`).pipe(
-      map((data) => ({
+    const processedCep: string = this.processCep(cep);
+
+    return this.http.get<Address>(`${this.API_URL}/${processedCep}/json`).pipe(
+      map((data: any) => ({
         cep: data.cep,
         logradouro: data.logradouro,
         complemento: data.complemento,

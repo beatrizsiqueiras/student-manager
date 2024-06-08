@@ -1,8 +1,8 @@
 export interface Address {
-  cep: string;
-  logradouro: string;
+  cep?: string;
+  logradouro?: string;
   complemento?: string;
-  bairro: string;
-  localidade: string;
-  uf: string;
+  bairro?: string;
+  localidade?: string;
+  uf?: string;
 }

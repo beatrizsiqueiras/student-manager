@@ -3,6 +3,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { ToastrService } from 'ngx-toastr';
+
 import {
   FormBuilder,
   FormGroup,
@@ -30,17 +32,15 @@ export class StudentFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private cepService: CepService
+    private cepService: CepService,
+    private toastr: ToastrService
   ) {
     this.registrationStudentForm = this.formBuilder.group({
       name: ['', Validators.required],
       age: ['', [Validators.required, Validators.min(1)]],
       course: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      cep: [
-        '',
-        [Validators.required, Validators.pattern('^[0-9]{5}-[0-9]{3}$')],
-      ],
+      cep: ['', Validators.required],
       street: ['', Validators.required],
       neighborhood: ['', Validators.required],
       houseNumber: ['', Validators.required],
@@ -57,10 +57,17 @@ export class StudentFormComponent implements OnInit {
     });
   }
 
-  searchAddress(cep: string): void {
+  searchAddress(cep: string): any {
     this.cepService.searchCep(cep).subscribe(
-      (address) => this.fillAddress(address),
-      (error) => console.error('Error searching CEP:', error)
+      (data: Address) => {
+        this.fillAddress(data);
+      },
+      (error) => {
+        this.toastr.warning(
+          'Por favor, preencha os campos manualmente',
+          'CEP não encontrado'
+        );
+      }
     );
   }
 
@@ -73,11 +80,15 @@ export class StudentFormComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
-    if (this.registrationStudentForm.valid) {
-      console.log(this.registrationStudentForm.value);
-    } else {
-      console.log('Form is invalid');
+  onSubmit(): any {
+    if (!this.registrationStudentForm.valid) {
+      return this.toastr.error(
+        'Por favor, preencha todos os campos obrigatórios!',
+        'Aviso!',
+        {
+          closeButton: true,
+        }
+      );
     }
   }
 }

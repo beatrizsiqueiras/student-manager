@@ -11,6 +11,14 @@ import { StudentFormComponent } from './components/student-form/student-form.com
 import { FooterComponent } from './shared/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
+import { NgxMaskDirective, provideNgxMask, IConfig } from 'ngx-mask';
+
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
+
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,8 +34,15 @@ import { HomeComponent } from './components/home/home.component';
     FooterComponent,
     HomeComponent,
     StudentFormComponent,
+    NgxMaskDirective,
+    CommonModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
   ],
-  providers: [],
+  providers: [provideNgxMask(maskConfig)],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
