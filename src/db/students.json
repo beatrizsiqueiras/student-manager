@@ -1,0 +1,21 @@
+{
+  "students": [
+    {
+      "id": "d3a2",
+      "name": "Beatriz Siqueira Costa",
+      "cpf": "02167575688",
+      "birthdate": "2001-05-21",
+      "course": "medicina",
+      "email": "beatriiz_rose@hotmail.com",
+      "cellphone": "33998730785",
+      "address": {
+        "cep": "39802-089",
+        "logradouro": "Rua Setenta",
+        "complemento": "22",
+        "bairro": "Manoel Pimenta",
+        "localidade": "Minas Gerais - Teófilo Otoni",
+        "uf": "MG"
+      }
+    }
+  ]
+}
