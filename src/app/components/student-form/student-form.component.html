@@ -1,0 +1,78 @@
+<div class="mt-5">
+    <div class="m-5 text-white text-center">
+        <h5>Cadastro de alunos</h5>
+    </div>
+    <form [formGroup]="registrationStudentForm" (ngSubmit)="onSubmit()">
+        <div class="col-12 row">
+            <div class="form-group col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Nome completo</mat-label>
+                    <input matInput placeholder="Insira o nome completo" formControlName="name">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Idade</mat-label>
+                    <input matInput placeholder="Insira a idade" formControlName="age" type="number">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Curso</mat-label>
+                    <mat-select formControlName="course">
+                        <mat-option value="engenharia">Engenharia</mat-option>
+                        <mat-option value="medicina">Medicina</mat-option>
+                        <mat-option value="direito">Direito</mat-option>
+                        <mat-option value="computacao">Computação</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="form-group col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput placeholder="Insira o e-mail" formControlName="email" type="email">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-3">
+                <mat-form-field class="w-100">
+                    <mat-label>CEP</mat-label>
+                    <input matInput placeholder="Insira o CEP" formControlName="cep" mask="00000-000">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-3">
+                <mat-form-field class="w-100">
+                    <mat-label>Rua</mat-label>
+                    <input matInput placeholder="Insira a rua" formControlName="street">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-3">
+                <mat-form-field class="w-100">
+                    <mat-label>Bairro</mat-label>
+                    <input matInput placeholder="Insira o bairro" formControlName="neighborhood">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-3">
+                <mat-form-field class="w-100">
+                    <mat-label>Número</mat-label>
+                    <input matInput placeholder="Insira o número" formControlName="houseNumber">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-3">
+                <mat-form-field class="w-100">
+                    <mat-label>Cidade</mat-label>
+                    <input matInput placeholder="Insira a cidade" formControlName="city">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-3">
+                <mat-form-field class="w-100">
+                    <mat-label>Estado</mat-label>
+                    <input matInput placeholder="Insira o estado" formControlName="state">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="text-center m-5">
+            <button type="submit" [disabled]="!registrationStudentForm.valid" mat-raised-button color="primary"
+                style="background-color: #00406c; color:white;">Cadastrar</button>
+        </div>
+    </form>
+</div>
