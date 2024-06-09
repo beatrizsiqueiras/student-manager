@@ -56,6 +56,7 @@ export class StudentFormComponent implements OnInit {
         localidade: [''],
         uf: [''],
       }),
+      active: 1,
     });
   }
 
@@ -107,7 +108,9 @@ export class StudentFormComponent implements OnInit {
 
     const formData: Student = this.registrationStudentForm.value;
     this.api.create(formData).subscribe(
-      (success) => {
+      (response) => {
+        this.registrationStudentForm.reset();
+
         Swal.fire({
           title: 'Aluno cadastrado com sucesso!',
           icon: 'success',

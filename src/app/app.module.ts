@@ -15,6 +15,7 @@ import { NgxMaskDirective, provideNgxMask, IConfig } from 'ngx-mask';
 
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import { StudentListComponent } from './components/student-list/student-list.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -34,6 +35,7 @@ const maskConfig: Partial<IConfig> = {
     FooterComponent,
     HomeComponent,
     StudentFormComponent,
+    StudentListComponent,
     NgxMaskDirective,
     CommonModule,
     ToastrModule.forRoot({
