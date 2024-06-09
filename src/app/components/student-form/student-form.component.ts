@@ -39,7 +39,7 @@ export class StudentFormComponent implements OnInit {
     private cepService: CepService,
     private toastr: ToastrService,
     private api: ApiService,
-	private router: Router
+    private router: Router
   ) {
     this.registrationStudentForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -106,7 +106,7 @@ export class StudentFormComponent implements OnInit {
     }
 
     const formData: Student = this.registrationStudentForm.value;
-    const send = this.api.create(formData).subscribe(
+    this.api.create(formData).subscribe(
       (success) => {
         Swal.fire({
           title: 'Aluno cadastrado com sucesso!',
