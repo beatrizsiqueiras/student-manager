@@ -17,8 +17,9 @@ export class ApiService {
   }
 
   create(studentData: any): Observable<any> {
+    const newStudentData = { ...studentData, id: this.generateRandomId() };
     return this.http
-      .post(this.baseUrl, studentData)
+      .post(this.baseUrl, newStudentData)
       .pipe(catchError(this.handleError));
   }
 
@@ -30,6 +31,10 @@ export class ApiService {
   delete(studentId: number): Observable<any> {
     const url = `${this.baseUrl}/${studentId}`;
     return this.http.delete(url).pipe(catchError(this.handleError));
+  }
+
+  private generateRandomId(): number {
+    return Math.floor(Math.random() * 1000000);
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {
