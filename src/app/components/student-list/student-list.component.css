@@ -10,3 +10,8 @@ table {
 td, th {
     width: 25%;
 }
+
+a {
+    font-size: 25px;
+    cursor: pointer;
+}
