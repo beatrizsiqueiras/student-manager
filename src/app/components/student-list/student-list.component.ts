@@ -11,6 +11,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { Student } from 'src/app/models/student.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-list',
@@ -33,7 +34,11 @@ export class StudentListComponent implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private toastr: ToastrService, private api: ApiService) {
+  constructor(
+    private toastr: ToastrService,
+    private api: ApiService,
+    private router: Router
+  ) {
     this.studentData = new MatTableDataSource();
   }
 
@@ -44,8 +49,7 @@ export class StudentListComponent implements AfterViewInit, OnInit {
       },
       error: (err: any) => {
         this.toastr.error('Erro ao carregar os alunos.');
-		console.log(err);
-		
+        console.log(err);
       },
     });
   }
@@ -78,9 +82,7 @@ export class StudentListComponent implements AfterViewInit, OnInit {
         (response) => {
           student.active = newActiveStatus;
           this.toastr.success(
-            `Aluno ${
-              newActiveStatus ? 'ativado' : 'desativado'
-            }`
+            `Aluno ${newActiveStatus ? 'ativado' : 'desativado'}`
           );
         },
         (error) => {
@@ -91,6 +93,6 @@ export class StudentListComponent implements AfterViewInit, OnInit {
   }
 
   editStudent(id: number) {
-    this.toastr.info(`Edit student with id ${id}`);
+    this.router.navigate(['/student', id]);
   }
 }

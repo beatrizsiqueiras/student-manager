@@ -115,13 +115,13 @@ export class StudentFormComponent implements OnInit {
           title: 'Aluno cadastrado com sucesso!',
           icon: 'success',
         }).then((result) => {
-          this.router.navigate(['/']);
+          this.router.navigate(['/students']);
         });
       },
       (error) => {
         this.toastr.error(
-          'Ocorreu um erro ao cadastrar o usuário, tente novamente',
-          'Erro ao cadastrar'
+          'Ocorreu um erro ao cadastrar o aluno, tente novamente',
+          'Erro ao cadastrar!'
         );
       }
     );

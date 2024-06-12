@@ -2,10 +2,11 @@
     <div class="container">
         <a class="navbar-brand" routerLink="">Portal de Alunos</a>
         <div [ngClass]="{'collapsed': !isNavbarCollapsed}">
-            <button class="navbar-toggler" type="button" (click)="toggleNavbar()" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button mat-mini-fab color="primary" class="navbar-toggler" type="button" (click)="toggleNavbar()"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <mat-icon>menu</mat-icon>
             </button>
+
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show': !isNavbarCollapsed}">
             <ul class="navbar-nav ms-auto">

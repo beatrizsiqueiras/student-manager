@@ -23,7 +23,7 @@ const maskConfig: Partial<IConfig> = {
 };
 
 @NgModule({
-  declarations: [AppComponent, StudentDetailsComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -44,6 +44,7 @@ const maskConfig: Partial<IConfig> = {
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
+    StudentDetailsComponent,
   ],
   providers: [provideNgxMask(maskConfig)],
   bootstrap: [AppComponent],
