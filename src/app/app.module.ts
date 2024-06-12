@@ -16,13 +16,14 @@ import { NgxMaskDirective, provideNgxMask, IConfig } from 'ngx-mask';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { StudentListComponent } from './components/student-list/student-list.component';
+import { StudentDetailsComponent } from './components/student-details/student-details.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
 };
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, StudentDetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

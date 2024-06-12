@@ -1,7 +1,7 @@
 {
   "students": [
     {
-      "id": 935451,
+      "id": "935451",
       "name": "Beatriz Siqueira Costa",
       "cpf": "021767767788",
       "birthdate": "",
@@ -15,6 +15,24 @@
         "bairro": "Manoel Pimenta",
         "localidade": "Teófilo Otoni",
         "uf": "MG"
+      },
+      "active": 0
+    },
+    {
+      "id": "21235",
+      "name": "Luiz Scofield",
+      "cpf": "938278498920",
+      "birthdate": "",
+      "course": "direito",
+      "email": "luiz@gmail.com",
+      "cellphone": "",
+      "address": {
+        "cep": "39802",
+        "logradouro": "",
+        "complemento": "",
+        "bairro": "",
+        "localidade": "",
+        "uf": ""
       },
       "active": 1
     }

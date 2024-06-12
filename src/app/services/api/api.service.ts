@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Student } from 'src/app/models/student.model';
 
 @Injectable({
   providedIn: 'root',
@@ -16,14 +17,14 @@ export class ApiService {
     return this.http.get(url).pipe(catchError(this.handleError));
   }
 
-  create(studentData: any): Observable<any> {
+  create(studentData: Student): Observable<any> {
     const newStudentData = { ...studentData, id: this.generateRandomId() };
     return this.http
       .post(this.baseUrl, newStudentData)
       .pipe(catchError(this.handleError));
   }
 
-  update(studentId: number, studentData: any): Observable<any> {
+  update(studentId: number, studentData: Student): Observable<any> {
     const url = `${this.baseUrl}/${studentId}`;
     return this.http.put(url, studentData).pipe(catchError(this.handleError));
   }

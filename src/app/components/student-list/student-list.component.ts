@@ -44,6 +44,8 @@ export class StudentListComponent implements AfterViewInit, OnInit {
       },
       error: (err: any) => {
         this.toastr.error('Erro ao carregar os alunos.');
+		console.log(err);
+		
       },
     });
   }
@@ -62,19 +64,33 @@ export class StudentListComponent implements AfterViewInit, OnInit {
     }
   }
 
-  toggleActive(id: string) {
-    // @ts-ignore
+  toggleActive(id: number) {
     const student = this.studentData.data.find((s) => s.id === id);
+
     if (student) {
-      // @ts-ignore
-      student.active = !student.active;
-      this.toastr.success(
-        `Student ${student.active ? 'activated' : 'deactivated'}`
+      const newActiveStatus = student.active == 1 ? 0 : 1;
+      const studentData = {
+        ...student,
+        active: newActiveStatus,
+      };
+
+      this.api.update(id, studentData).subscribe(
+        (response) => {
+          student.active = newActiveStatus;
+          this.toastr.success(
+            `Aluno ${
+              newActiveStatus ? 'ativado' : 'desativado'
+            }`
+          );
+        },
+        (error) => {
+          this.toastr.error('Erro ao alterar o status do aluno!');
+        }
       );
     }
   }
 
-  editStudent(id: string) {
+  editStudent(id: number) {
     this.toastr.info(`Edit student with id ${id}`);
   }
 }

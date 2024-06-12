@@ -1,7 +1,7 @@
 <div class="mt-5">
     <mat-form-field class="w-100">
         <mat-label>Filter</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Beatriz" #input>
     </mat-form-field>
 
     <div class="mat-elevation-z8">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-3">
                             <a (click)="toggleActive(student.id)">
-                                <i class="bi bi-person-{{ student.active ? 'check':'dash'}}"></i>
+                                <i class="bi bi-person-{{ student.active ? 'check text-success':'dash text-warning'}}"></i>
                             </a>
                         </div>
                     </div>
