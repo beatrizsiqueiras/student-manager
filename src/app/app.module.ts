@@ -19,34 +19,34 @@ import { StudentListComponent } from './components/student-list/student-list.com
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
 
 const maskConfig: Partial<IConfig> = {
-  validation: false,
+    validation: false,
 };
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    StudentFormComponent,
-    StudentListComponent,
-    NgxMaskDirective,
-    CommonModule,
-    ToastrModule.forRoot({
-      timeOut: 3000,
-      positionClass: 'toast-top-right',
-      preventDuplicates: true,
-    }),
-    StudentDetailsComponent,
-  ],
-  providers: [provideNgxMask(maskConfig)],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        StudentFormComponent,
+        StudentListComponent,
+        NgxMaskDirective,
+        CommonModule,
+        ToastrModule.forRoot({
+            timeOut: 3000,
+            positionClass: 'toast-top-right',
+            preventDuplicates: true,
+        }),
+        StudentDetailsComponent,
+    ],
+    providers: [provideNgxMask(maskConfig)],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

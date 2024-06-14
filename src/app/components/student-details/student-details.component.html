@@ -1,59 +1,93 @@
 <div class="mt-2">
     <mat-list>
-        <mat-list-item>
-            Dados pessoais
-        </mat-list-item>
+        <mat-list-item> Dados pessoais </mat-list-item>
         <form [formGroup]="studentDetailsForm" (ngSubmit)="onSubmit(studentId)">
-            <div class="text-end mb-3 col-12 ">
-                <button type="submit" *ngIf="isEditMode" mat-raised-button
-                    color="{{(isEditMode ? 'primary' : 'light')}}" style="margin-right: 7px;">Salvar</button>
+            <div class="text-end mb-3 col-12">
+                <button
+                    type="submit"
+                    *ngIf="isEditMode"
+                    mat-raised-button
+                    color="{{ isEditMode ? 'primary' : 'light' }}"
+                    style="margin-right: 7px"
+                >
+                    Salvar
+                </button>
 
-                <a mat-raised-button color="{{(!isEditMode ? 'primary' : 'warn')}}"
-                    (click)="handleEditStudentData((!isEditMode ? true : false))">
-                    {{ !isEditMode ? 'Editar' : 'Cancelar'}}
+                <a
+                    mat-raised-button
+                    color="{{ !isEditMode ? 'primary' : 'warn' }}"
+                    (click)="handleEditStudentData(!isEditMode ? true : false)"
+                >
+                    {{ !isEditMode ? 'Editar' : 'Cancelar' }}
                 </a>
             </div>
             <div class="row col-12">
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Nome completo</mat-label>
-                        <input matInput placeholder="Insira o nome completo" formControlName="name">
+                        <input
+                            matInput
+                            placeholder="Insira o nome completo"
+                            formControlName="name"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>CPF</mat-label>
-                        <input matInput placeholder="Insira o CPF" formControlName="cpf">
+                        <input
+                            matInput
+                            placeholder="Insira o CPF"
+                            formControlName="cpf"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Data de Nascimento</mat-label>
-                        <input matInput placeholder="Insira a data de nascimento" formControlName="birthdate"
-                            type="date">
+                        <input
+                            matInput
+                            placeholder="Insira a data de nascimento"
+                            formControlName="birthdate"
+                            type="date"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Curso</mat-label>
                         <mat-select formControlName="course">
-                            <mat-option value="engenharia">Engenharia</mat-option>
+                            <mat-option value="engenharia"
+                                >Engenharia</mat-option
+                            >
                             <mat-option value="medicina">Medicina</mat-option>
                             <mat-option value="direito">Direito</mat-option>
-                            <mat-option value="computacao">Computação</mat-option>
+                            <mat-option value="computacao"
+                                >Computação</mat-option
+                            >
                         </mat-select>
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>E-mail</mat-label>
-                        <input matInput placeholder="Insira o e-mail" formControlName="email" type="email">
+                        <input
+                            matInput
+                            placeholder="Insira o e-mail"
+                            formControlName="email"
+                            type="email"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Celular</mat-label>
-                        <input matInput placeholder="Insira o celular" formControlName="cellphone" type="tel">
+                        <input
+                            matInput
+                            placeholder="Insira o celular"
+                            formControlName="cellphone"
+                            type="tel"
+                        />
                     </mat-form-field>
                 </div>
             </div>
@@ -61,50 +95,80 @@
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>CEP</mat-label>
-                        <input matInput placeholder="Insira o CEP" formControlName="cep">
+                        <input
+                            matInput
+                            placeholder="Insira o CEP"
+                            formControlName="cep"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Rua</mat-label>
-                        <input matInput placeholder="Insira a rua" formControlName="logradouro">
+                        <input
+                            matInput
+                            placeholder="Insira a rua"
+                            formControlName="logradouro"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Bairro</mat-label>
-                        <input matInput placeholder="Insira o bairro" formControlName="bairro">
+                        <input
+                            matInput
+                            placeholder="Insira o bairro"
+                            formControlName="bairro"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Número</mat-label>
-                        <input matInput placeholder="Insira o número" formControlName="complemento">
+                        <input
+                            matInput
+                            placeholder="Insira o número"
+                            formControlName="complemento"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Cidade</mat-label>
-                        <input matInput placeholder="Insira a cidade" formControlName="localidade">
+                        <input
+                            matInput
+                            placeholder="Insira a cidade"
+                            formControlName="localidade"
+                        />
                     </mat-form-field>
                 </div>
                 <div class="form-group col-6">
                     <mat-form-field class="w-100">
                         <mat-label>Estado</mat-label>
-                        <input matInput placeholder="Insira o estado" formControlName="uf">
+                        <input
+                            matInput
+                            placeholder="Insira o estado"
+                            formControlName="uf"
+                        />
                     </mat-form-field>
                 </div>
             </div>
         </form>
         <mat-divider></mat-divider>
         <div>
-            <mat-list-item>
-                Status do aluno:
-            </mat-list-item>
+            <mat-list-item> Status do aluno: </mat-list-item>
             <div class="col-12">
                 <mat-radio-group>
-                    <mat-radio-button value=1 [checked]="(active ? true: false)">Ativo</mat-radio-button>
-                    <mat-radio-button value=0 [checked]="(!active ? true: false)">Desativado</mat-radio-button>
+                    <mat-radio-button
+                        value="1"
+                        [checked]="active ? true : false"
+                        >Ativo</mat-radio-button
+                    >
+                    <mat-radio-button
+                        value="0"
+                        [checked]="!active ? true : false"
+                        >Desativado</mat-radio-button
+                    >
                 </mat-radio-group>
             </div>
         </div>
@@ -113,5 +177,4 @@
             Area restrita
         </mat-list-item> -->
     </mat-list>
-
 </div>

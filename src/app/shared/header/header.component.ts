@@ -6,22 +6,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    RouterLink,
-    MatToolbarModule,
-    CommonModule,
-    MatButtonModule,
-    MatIconModule,
-  ],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+    selector: 'app-header',
+    standalone: true,
+    imports: [
+        RouterLink,
+        MatToolbarModule,
+        CommonModule,
+        MatButtonModule,
+        MatIconModule,
+    ],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  isNavbarCollapsed = true;
+    isNavbarCollapsed = true;
 
-  toggleNavbar() {
-    this.isNavbarCollapsed = !this.isNavbarCollapsed;
-  }
+    toggleNavbar() {
+        this.isNavbarCollapsed = !this.isNavbarCollapsed;
+    }
 }
