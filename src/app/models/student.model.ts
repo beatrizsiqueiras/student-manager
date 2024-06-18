@@ -10,4 +10,5 @@ export interface Student {
     cellphone: string;
     address: Address;
     active: number;
+    deletedAt?: string;
 }
