@@ -72,7 +72,7 @@ export class StudentListComponent implements AfterViewInit, OnInit {
         const student = this.studentData.data.find((s) => s.id === id);
 
         if (student) {
-            const newActiveStatus = student.active == 1 ? 0 : 1;
+            const newActiveStatus = student.active ? 0 : 1;
             const studentData = {
                 ...student,
                 active: newActiveStatus,

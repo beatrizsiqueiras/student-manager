@@ -1,130 +1,137 @@
 {
-  "students": [
-    {
-      "name": "Beatriz Siqueira Vital",
-      "cpf": "021767767788",
-      "birthdate": "",
-      "course": "medicina",
-      "email": "beatriiz_rose@hotmail.com",
-      "cellphone": "",
-      "address": {
-        "cep": "39802-089",
-        "logradouro": "Rua Setenta",
-        "bairro": "Manoel Pimenta",
-        "complemento": "",
-        "localidade": "Teófilo Otoni",
-        "uf": "MG"
-      },
-      "id": "935451",
-      "active": 0
-    },
-    {
-      "id": "21235",
-      "name": "Luiz Scofield",
-      "cpf": "938278498920",
-      "birthdate": "",
-      "course": "direito",
-      "email": "luiz@gmail.com",
-      "cellphone": "",
-      "address": {
-        "cep": "39802",
-        "logradouro": "",
-        "complemento": "",
-        "bairro": "",
-        "localidade": "",
-        "uf": ""
-      },
-      "active": 1
-    },
-    {
-      "id": "721678",
-      "name": "Luiz Scofield",
-      "cpf": "938278498920",
-      "birthdate": "",
-      "course": "direito",
-      "email": "luiz@gmail.com",
-      "cellphone": "",
-      "address": {
-        "cep": "39802",
-        "logradouro": "",
-        "bairro": "",
-        "complemento": "",
-        "localidade": "",
-        "uf": ""
-      },
-      "active": 1
-    },
-    {
-      "id": "844286",
-      "name": "Luiz Scofield",
-      "cpf": "938278498920",
-      "birthdate": "",
-      "course": "direito",
-      "email": "luiz@gmail.com",
-      "cellphone": "",
-      "address": {
-        "cep": "39802",
-        "logradouro": "",
-        "bairro": "",
-        "complemento": "",
-        "localidade": "",
-        "uf": ""
-      },
-      "active": 0
-    },
-    {
-      "id": "217124",
-      "name": "Luiz Scofieldzinho",
-      "cpf": "938278498920",
-      "birthdate": "",
-      "course": "direito",
-      "email": "luiz@gmail.com",
-      "cellphone": "",
-      "address": {
-        "cep": "39802",
-        "logradouro": "",
-        "bairro": "",
-        "complemento": "",
-        "localidade": "",
-        "uf": ""
-      },
-      "active": 1
-    },
-    {
-      "id": "907304",
-      "name": "Luiz Scofield zito",
-      "cpf": "938278498920",
-      "birthdate": "",
-      "course": "direito",
-      "email": "luiz@gmail.com",
-      "cellphone": "",
-      "address": {
-        "cep": "39802",
-        "logradouro": "",
-        "bairro": "",
-        "complemento": "",
-        "localidade": "",
-        "uf": ""
-      },
-      "active": 1
-    },
-    {
-      "id": "598667",
-      "name": "João Pedro Lisboa Vital",
-      "cpf": "0039823849393",
-      "birthdate": "2000-07-21",
-      "course": "computacao",
-      "email": "teste@gmail",
-      "cellphone": "33333333",
-      "address": {
-        "cep": "39803-197",
-        "logradouro": "Rua Senhor dos Passos",
-        "complemento": "2123",
-        "bairro": "Solidariedade",
-        "localidade": "Teófilo Otoni",
-        "uf": "MG"
-      },
-      "active": 1
-    }
-  ]
+    "students": [
+        {
+            "name": "Beatriz Siqueira Vital",
+            "cpf": "021767767788",
+            "birthdate": "",
+            "course": "medicina",
+            "email": "beatriiz_rose@hotmail.com",
+            "cellphone": "",
+            "address": {
+                "cep": "39802-089",
+                "logradouro": "Rua Setenta",
+                "bairro": "Manoel Pimenta",
+                "complemento": "",
+                "localidade": "Teófilo Otoni",
+                "uf": "MG"
+            },
+            "id": "935451",
+            "active": 1,
+            "deletedAt": ""
+        },
+        {
+            "id": "21235",
+            "name": "Luiz Scofield",
+            "cpf": "938278498920",
+            "birthdate": "",
+            "course": "direito",
+            "email": "luiz@gmail.com",
+            "cellphone": "",
+            "address": {
+                "cep": "39802",
+                "logradouro": "",
+                "complemento": "",
+                "bairro": "",
+                "localidade": "",
+                "uf": ""
+            },
+            "active": 1,
+            "deletedAt": ""
+        },
+        {
+            "id": "721678",
+            "name": "Luiz Scofield",
+            "cpf": "938278498920",
+            "birthdate": "",
+            "course": "direito",
+            "email": "luiz@gmail.com",
+            "cellphone": "",
+            "address": {
+                "cep": "39802",
+                "logradouro": "",
+                "bairro": "",
+                "complemento": "",
+                "localidade": "",
+                "uf": ""
+            },
+            "active": 1,
+            "deletedAt": ""
+        },
+        {
+            "id": "844286",
+            "name": "Luiz Scofield",
+            "cpf": "938278498920",
+            "birthdate": "",
+            "course": "direito",
+            "email": "luiz@gmail.com",
+            "cellphone": "",
+            "address": {
+                "cep": "39802",
+                "logradouro": "",
+                "bairro": "",
+                "complemento": "",
+                "localidade": "",
+                "uf": ""
+            },
+            "active": 0,
+            "deletedAt": ""
+        },
+        {
+            "id": "217124",
+            "name": "Luiz Scofieldzinho",
+            "cpf": "938278498920",
+            "birthdate": "",
+            "course": "direito",
+            "email": "luiz@gmail.com",
+            "cellphone": "",
+            "address": {
+                "cep": "39802",
+                "logradouro": "",
+                "bairro": "",
+                "complemento": "",
+                "localidade": "",
+                "uf": ""
+            },
+            "active": 1,
+            "deletedAt": "2024-06-19T00:31:34.439Z"
+        },
+        {
+            "id": "907304",
+            "name": "Luiz Scofield zito",
+            "cpf": "938278498920",
+            "birthdate": "",
+            "course": "direito",
+            "email": "luiz@gmail.com",
+            "cellphone": "",
+            "address": {
+                "cep": "39802",
+                "logradouro": "",
+                "bairro": "",
+                "complemento": "",
+                "localidade": "",
+                "uf": ""
+            },
+            "active": 1,
+            "deletedAt": ""
+        },
+        {
+            "id": "598667",
+            "name": "João Pedro Lisboa Vital",
+            "cpf": "0039823849393",
+            "birthdate": "2000-07-21",
+            "course": "computacao",
+            "email": "teste@gmail",
+            "cellphone": "33333333",
+            "address": {
+                "cep": "39803-197",
+                "logradouro": "Rua Senhor dos Passos",
+                "complemento": "2123",
+                "bairro": "Solidariedade",
+                "localidade": "Teófilo Otoni",
+                "uf": "MG"
+            },
+            "active": 1,
+            "deletedAt": ""
+        }
+    ]
 }

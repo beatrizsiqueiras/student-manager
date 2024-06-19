@@ -57,6 +57,7 @@ export class StudentFormComponent implements OnInit {
                 uf: [''],
             }),
             active: 1,
+            deletedAt: '',
         });
     }
 

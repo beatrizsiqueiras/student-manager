@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {
     FormBuilder,
     FormGroup,
+    FormsModule,
     ReactiveFormsModule,
     Validators,
 } from '@angular/forms';
@@ -34,6 +35,7 @@ import Swal from 'sweetalert2';
         MatListModule,
         MatDividerModule,
         MatRadioModule,
+        FormsModule,
     ],
 })
 export class StudentDetailsComponent implements OnInit {
@@ -66,6 +68,7 @@ export class StudentDetailsComponent implements OnInit {
                 localidade: [{ value: '', disabled: true }],
                 uf: [{ value: '', disabled: true }],
             }),
+            deletedAt: '',
         });
     }
 
@@ -119,6 +122,82 @@ export class StudentDetailsComponent implements OnInit {
                     'Ocorreu um erro ao editar o aluno, tente novamente!',
                     'Erro ao editar',
                 );
+            },
+        );
+    }
+
+    onStatusChange(newStatus: any) {
+        const status = parseInt(newStatus);
+        this.changeStudentStatus(this.studentId, status);
+    }
+
+    changeStudentStatus(id: number, newStatus: number) {
+        this.api.get(id).subscribe(
+            (student: Student) => {
+                const studentData: Student = {
+                    ...student,
+                    active: newStatus,
+                };
+
+                this.api.update(id, studentData).subscribe(
+                    (response) => {
+                        this.active = newStatus;
+                        this.toastr.success(
+                            `Aluno ${newStatus == 1 ? 'ativado' : 'desativado'}`,
+                        );
+                    },
+                    (error) => {
+                        this.toastr.error('Erro ao alterar o status do aluno!');
+                    },
+                );
+            },
+            (error) => {
+                this.toastr.error('Erro ao carregar os dados do aluno!');
+            },
+        );
+    }
+
+    onDelete(id: number): any {
+        Swal.fire({
+            title: 'Deseja deletar esse aluno?',
+            text: 'Não será possível reverter esta ação!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, deletar!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                if (this.deleteStudent(id)) {
+                    Swal.fire({
+                        title: 'Deleted!',
+                        text: 'Your file has been deleted.',
+                        icon: 'success',
+                    });
+                }
+            }
+        });
+    }
+
+    deleteStudent(id: number): any {
+        this.api.get(id).subscribe(
+            (student: Student) => {
+                const studentData: Student = {
+                    ...student,
+                    deletedAt: new Date().toISOString(),
+                };
+
+                this.api.update(id, studentData).subscribe(
+                    (response) => {
+                        return true;
+                    },
+                    (error) => {
+                        return false;
+                    },
+                );
+            },
+            (error) => {
+                return false;
             },
         );
     }
