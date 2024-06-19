@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import {
+    HttpClient,
+    HttpErrorResponse,
+    HttpParams,
+} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Student } from 'src/app/models/student.model';
@@ -13,8 +17,15 @@ export class ApiService {
     constructor(private http: HttpClient) {}
 
     get(studentId?: number): Observable<any> {
+        let params = new HttpParams();
+
         const url = studentId ? `${this.baseUrl}/${studentId}` : this.baseUrl;
-        return this.http.get(url).pipe(catchError(this.handleError));
+
+        params = params.append('deletedAt_ne', '');
+
+        return this.http
+            .get<any[]>(url, { params })
+            .pipe(catchError(this.handleError));
     }
 
     create(studentData: Student): Observable<any> {
