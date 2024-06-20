@@ -66,3 +66,12 @@ cd <NOME_DO_DIRETORIO>
 -   Listagem de itens.
 -   Visualização detalhada de itens.
 -   Adição, edição e remoção de itens.
+
+### Versão desktop:
+
+[Screencast from 20-06-2024 20:37:49.webm](https://github.com/beatrizsiqueiras/student-manager/assets/88863619/7a0a9937-168f-4704-b4b0-565773198f03)
+
+### Versão mobile:
+
+[Screencast from 20-06-2024 20:42:16.webm](https://github.com/beatrizsiqueiras/student-manager/assets/88863619/525d0418-df85-4f07-a21b-a60120e10681)
+
