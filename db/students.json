@@ -1,13 +1,13 @@
 {
   "students": [
     {
-      "id": 480269,
+      "id": "480269",
       "name": "Beatriz Siqueira Costa",
       "cpf": "9878978789",
-      "birthdate": "",
-      "course": "Sistemas",
+      "birthdate": "1998-05-12",
+      "course": "Sistemas de Informação",
       "email": "bea@hotmail.com",
-      "cellphone": "",
+      "cellphone": "31987654321",
       "address": {
         "cep": "39803-197",
         "logradouro": "Rua Senhor dos Passos",
@@ -15,6 +15,177 @@
         "bairro": "Solidariedade",
         "localidade": "Teófilo Otoni",
         "uf": "MG"
+      },
+      "active": 0,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480270",
+      "name": "Carlos Eduardo Ferreira",
+      "cpf": "12345678901",
+      "birthdate": "1997-08-25",
+      "course": "Direito",
+      "email": "carlosedu@gmail.com",
+      "cellphone": "21987654322",
+      "address": {
+        "cep": "20271-240",
+        "logradouro": "Avenida Presidente Vargas",
+        "complemento": "1002",
+        "bairro": "Centro",
+        "localidade": "Rio de Janeiro",
+        "uf": "RJ"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480271",
+      "name": "Ana Paula Silva",
+      "cpf": "23456789012",
+      "birthdate": "2000-02-14",
+      "course": "Direito",
+      "email": "anapsilva@gmail.com",
+      "cellphone": "11987654323",
+      "address": {
+        "cep": "04567-030",
+        "logradouro": "Rua Joaquim Floriano",
+        "complemento": "Apto 45",
+        "bairro": "Itaim Bibi",
+        "localidade": "São Paulo",
+        "uf": "SP"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480272",
+      "name": "Mariana Oliveira",
+      "cpf": "34567890123",
+      "birthdate": "1999-11-22",
+      "course": "Engenharia Elétrica",
+      "email": "mariana.oliveira@yahoo.com",
+      "cellphone": "31987654324",
+      "address": {
+        "cep": "30130-110",
+        "logradouro": "Avenida Amazonas",
+        "complemento": "Sala 702",
+        "bairro": "Centro",
+        "localidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "active": 0,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480273",
+      "name": "João Pedro Almeida",
+      "cpf": "45678901234",
+      "birthdate": "2001-07-09",
+      "course": "Medicina",
+      "email": "joao_pedro@gmail.com",
+      "cellphone": "11987654325",
+      "address": {
+        "cep": "04045-050",
+        "logradouro": "Rua Domingos de Morais",
+        "complemento": "Apto 801",
+        "bairro": "Vila Mariana",
+        "localidade": "São Paulo",
+        "uf": "SP"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480274",
+      "name": "Lucas Martins",
+      "cpf": "56789012345",
+      "birthdate": "1998-03-10",
+      "course": "Engenharia Mecatrônica",
+      "email": "lucas_martins@gmail.com",
+      "cellphone": "21987654326",
+      "address": {
+        "cep": "20551-030",
+        "logradouro": "Rua Conde de Bonfim",
+        "complemento": "Apto 302",
+        "bairro": "Tijuca",
+        "localidade": "Rio de Janeiro",
+        "uf": "RJ"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480275",
+      "name": "Fernanda Souza",
+      "cpf": "67890123456",
+      "birthdate": "1996-12-05",
+      "course": "Psicologia",
+      "email": "fernanda_souza@gmail.com",
+      "cellphone": "31987654327",
+      "address": {
+        "cep": "30110-060",
+        "logradouro": "Avenida Afonso Pena",
+        "complemento": "Sala 505",
+        "bairro": "Centro",
+        "localidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480276",
+      "name": "Gabriela Pereira",
+      "cpf": "78901234567",
+      "birthdate": "2002-09-21",
+      "course": "Matemática",
+      "email": "gabriela.pereira@gmail.com",
+      "cellphone": "31987654328",
+      "address": {
+        "cep": "30880-140",
+        "logradouro": "Rua Padre Eustáquio",
+        "complemento": "Apto 704",
+        "bairro": "Padre Eustáquio",
+        "localidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480277",
+      "name": "Rafael Almeida",
+      "cpf": "89012345678",
+      "birthdate": "2000-01-30",
+      "course": "Engenharia Aeroespacial",
+      "email": "rafael.almeida@gmail.com",
+      "cellphone": "21987654329",
+      "address": {
+        "cep": "22775-055",
+        "logradouro": "Estrada dos Bandeirantes",
+        "complemento": "Apto 101",
+        "bairro": "Jacarepaguá",
+        "localidade": "Rio de Janeiro",
+        "uf": "RJ"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": "480278",
+      "name": "Larissa Costa",
+      "cpf": "90123456789",
+      "birthdate": "1995-07-15",
+      "course": "Letras",
+      "email": "larissa.costa@gmail.com",
+      "cellphone": "11987654330",
+      "address": {
+        "cep": "04094-050",
+        "logradouro": "Rua Vergueiro",
+        "complemento": "Apto 202",
+        "bairro": "Paraíso",
+        "localidade": "São Paulo",
+        "uf": "SP"
       },
       "active": 1,
       "deletedAt": "null"

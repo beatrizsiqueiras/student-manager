@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
+import { AboutComponent } from './components/about/about.component';
 
 const maskConfig: Partial<IConfig> = {
     validation: false,
@@ -45,6 +46,7 @@ const maskConfig: Partial<IConfig> = {
             preventDuplicates: true,
         }),
         StudentDetailsComponent,
+        AboutComponent,
     ],
     providers: [provideNgxMask(maskConfig)],
     bootstrap: [AppComponent],
