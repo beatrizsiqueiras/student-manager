@@ -1,8 +1,7 @@
 {
   "students": [
     {
-      "id": "480269",
-      "name": "Beatriz Siqueira Costa",
+      "name": "Beatriz Siqueira ",
       "cpf": "9878978789",
       "birthdate": "1998-05-12",
       "course": "Sistemas de Informação",
@@ -11,13 +10,14 @@
       "address": {
         "cep": "39803-197",
         "logradouro": "Rua Senhor dos Passos",
-        "complemento": "319",
         "bairro": "Solidariedade",
+        "complemento": "319",
         "localidade": "Teófilo Otoni",
         "uf": "MG"
       },
-      "active": 0,
-      "deletedAt": "null"
+      "deletedAt": "null",
+      "id": "480269",
+      "active": 1
     },
     {
       "id": "480270",
@@ -36,7 +36,7 @@
         "uf": "RJ"
       },
       "active": 1,
-      "deletedAt": "null"
+      "deletedAt": "2024-06-20T23:39:23.262Z"
     },
     {
       "id": "480271",
@@ -186,6 +186,63 @@
         "bairro": "Paraíso",
         "localidade": "São Paulo",
         "uf": "SP"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": "963856",
+      "name": "Beatriz Siqueira Costa",
+      "cpf": "2232322",
+      "birthdate": "",
+      "course": "Engenharia Eletrica",
+      "email": "beatrizsiqueiracosta2001@hotmail.com",
+      "cellphone": "",
+      "address": {
+        "cep": "39803-197",
+        "logradouro": "Rua Senhor dos Passos",
+        "complemento": "",
+        "bairro": "Solidariedade",
+        "localidade": "Teófilo Otoni",
+        "uf": "MG"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": 877787,
+      "name": "Ana mariA",
+      "cpf": "0928943204213",
+      "birthdate": "2001-05-10",
+      "course": "Psicologia",
+      "email": "ana@gmail.com",
+      "cellphone": "3398789842",
+      "address": {
+        "cep": "39803192",
+        "logradouro": "Rua Senhor dos Passos",
+        "complemento": "",
+        "bairro": "Solidariedade",
+        "localidade": "Teófilo Otoni",
+        "uf": "MG"
+      },
+      "active": 1,
+      "deletedAt": "null"
+    },
+    {
+      "id": 209312,
+      "name": "Luis felipe",
+      "cpf": "3929484902",
+      "birthdate": "2002-01-03",
+      "course": "Engenharia Aeroespacial",
+      "email": "luis@gmail.com",
+      "cellphone": "",
+      "address": {
+        "cep": "39803193",
+        "logradouro": "Rua Carijós",
+        "complemento": "323",
+        "bairro": "Filadélfia",
+        "localidade": "Teófilo Otoni",
+        "uf": "MG"
       },
       "active": 1,
       "deletedAt": "null"

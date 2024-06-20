@@ -1,0 +1,25 @@
+.bi-person-check {
+    color: #2A9D8F;
+}
+
+.bi-mortarboard-fill {
+    color: #E9C46A;
+}
+
+.bi-journal-bookmark-fill {
+    color: #F4A261;
+}
+
+.bi-people-fill {
+    color: #E76F51;
+}
+
+img {
+    width: 500px;
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 250px;
+    }
+}

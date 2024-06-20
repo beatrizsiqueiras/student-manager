@@ -16,3 +16,11 @@ a {
     font-size: 25px;
     cursor: pointer;
 }
+
+.bi-person-check {
+    color: #2a9d8f;
+}
+
+.bi-person-dash {
+    color: #e76f51;
+}
