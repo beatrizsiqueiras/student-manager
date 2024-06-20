@@ -16,8 +16,8 @@
         "uf": "MG"
       },
       "id": "935451",
-      "active": 1,
-      "deletedAt": ""
+      "active": 0,
+      "deletedAt": "null"
     },
     {
       "id": "21235",
@@ -36,10 +36,9 @@
         "uf": ""
       },
       "active": 1,
-      "deletedAt": ""
+      "deletedAt": "2024-06-20T00:55:35.739Z"
     },
     {
-      "id": "721678",
       "name": "Luiz Scofield",
       "cpf": "938278498920",
       "birthdate": "",
@@ -54,8 +53,8 @@
         "localidade": "",
         "uf": ""
       },
-      "active": 1,
-      "deletedAt": ""
+      "deletedAt": "2024-06-19T23:08:04.553Z",
+      "id": "721678"
     },
     {
       "id": "844286",
@@ -74,7 +73,7 @@
         "uf": ""
       },
       "active": 0,
-      "deletedAt": ""
+      "deletedAt": "2024-06-19T23:06:28.745Z"
     },
     {
       "id": "217124",
@@ -92,8 +91,8 @@
         "localidade": "",
         "uf": ""
       },
-      "active": 1,
-      "deletedAt": "2024-06-19T00:40:45.594Z"
+      "active": 0,
+      "deletedAt": "2024-06-19T22:58:38.860Z"
     },
     {
       "id": "907304",
@@ -112,7 +111,7 @@
         "uf": ""
       },
       "active": 1,
-      "deletedAt": ""
+      "deletedAt": "2024-06-19T23:03:16.012Z"
     },
     {
       "id": "598667",
@@ -131,7 +130,7 @@
         "uf": "MG"
       },
       "active": 1,
-      "deletedAt": ""
+      "deletedAt": "null"
     }
   ]
 }

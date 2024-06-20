@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DebugElement, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
     FormBuilder,
@@ -68,7 +68,7 @@ export class StudentDetailsComponent implements OnInit {
                 localidade: [{ value: '', disabled: true }],
                 uf: [{ value: '', disabled: true }],
             }),
-            deletedAt: '',
+            deletedAt: 'null',
         });
     }
 
@@ -113,8 +113,6 @@ export class StudentDetailsComponent implements OnInit {
                 Swal.fire({
                     title: 'Dados salvos com sucesso!',
                     icon: 'success',
-                }).then((result) => {
-                    this.router.navigate(['/students']);
                 });
             },
             (error) => {
@@ -168,37 +166,31 @@ export class StudentDetailsComponent implements OnInit {
             confirmButtonText: 'Sim, deletar!',
         }).then((result) => {
             if (result.isConfirmed) {
-                if (this.deleteStudent(id)) {
+                const deleted = this.deleteStudent(id);
+                console.log(deleted);
+
+                if (deleted) {
+                    console.log('cu');
+
                     Swal.fire({
-                        title: 'Deleted!',
-                        text: 'Your file has been deleted.',
+                        title: 'Aluno deletado!',
                         icon: 'success',
+                    }).then((result) => {
+                        this.router.navigate(['/students']);
                     });
                 }
             }
         });
     }
 
-    deleteStudent(id: number): any {
-        this.api.get(id).subscribe(
-            (student: Student) => {
-                const studentData: Student = {
-                    ...student,
-                    deletedAt: new Date().toISOString(),
-                };
-
-                this.api.update(id, studentData).subscribe(
-                    (response) => {
-                        return true;
-                    },
-                    (error) => {
-                        return false;
-                    },
-                );
-            },
-            (error) => {
-                return false;
-            },
-        );
+    deleteStudent(id: number): boolean {
+        this.api.get(id).subscribe((student: Student) => {
+            const studentData: Student = {
+                ...student,
+                deletedAt: new Date().toISOString(),
+            };
+            this.api.update(id, studentData).subscribe();
+        });
+        return true;
     }
 }

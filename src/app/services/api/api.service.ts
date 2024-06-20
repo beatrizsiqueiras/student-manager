@@ -21,7 +21,7 @@ export class ApiService {
 
         const url = studentId ? `${this.baseUrl}/${studentId}` : this.baseUrl;
 
-        params = params.append('deletedAt_ne', '');
+        params = params.append('deletedAt', 'null');
 
         return this.http
             .get<any[]>(url, { params })
