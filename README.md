@@ -1,27 +1,68 @@
-# ProjetoExemplo
+# Trabalho Avaliativo - Programação para Dispositivos Móveis :
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+### Objetivo
 
-## Development server
+-   O objetivo deste trabalho é desenvolver uma aplicação web utilizando Angular, Angular Material e Bootstrap no front-end, e json-server como backend, simulando um banco de dados em JSON. A aplicação deve proporcionar uma interface amigável e responsiva para o usuário, demonstrando os conhecimentos adquiridos em programação para dispositivos móveis.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requisitos
 
-## Code scaffolding
+-   Node.js (versão > 20) e npm instalados.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    Site oficial: <a href="https://nodejs.org/pt">Node.js</a>
+    Certifique-se de baixar a versão mais recente disponível no site oficial.
 
-## Build
+-   Angular CLI instalado globalmente.
+    `npm install -g @angular/cli`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+-   json-server instalado globalmente.
+    `npm install -g json-server`
 
-## Running unit tests
+## Instruções de Uso:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+-   Certifique-se de que você possui o Node.js e o npm instalados em sua máquina.
+-   Clone o repositório do projeto para o seu ambiente local
 
-## Running end-to-end tests
+    `git clone <URL_DO_REPOSITORIO> `
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+-   Navegue até o diretório do projeto.
 
-## Further help
+cd <NOME_DO_DIRETORIO>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-   Instale as dependências do projeto.
+
+    `npm install`
+
+### Iniciando a API:
+
+-   Inicie o json-server para simular o backend.
+
+    `json-server --watch db/students.json`
+
+-   O json-server estará rodando em http://localhost:3000.
+
+### Iniciando a aplicação Angular:
+
+-   Abra um novo terminal e navegue até o diretório do projeto, se ainda não estiver nele.
+
+    `cd <NOME_DO_DIRETORIO>`
+
+-   Inicie a aplicação Angular.
+
+    `ng serve`
+
+-   A aplicação estará rodando em http://localhost:4200.
+
+### O que foi feito?
+
+-   Estrutura do Projeto: O projeto foi estruturado utilizando Angular, Angular Material para componentes de UI e Bootstrap para estilos adicionais e responsividade.
+-   Componentes Angular: Foram criados diversos componentes, cada um responsável por uma parte específica da aplicação.
+-   Serviços: Serviços foram desenvolvidos para lidar com a comunicação entre o front-end e o json-server.
+-   Rotas: Configuração de rotas para navegação entre diferentes vistas da aplicação.
+-   Estilização: Utilização de Angular Material e Bootstrap para uma interface limpa e responsiva.
+
+-   Banco de Dados Simulado: Utilização do json-server para simular uma API RESTful com um banco de dados JSON.
+
+-   Funcionalidades Implementadas:
+-   Listagem de itens.
+-   Visualização detalhada de itens.
+-   Adição, edição e remoção de itens.
