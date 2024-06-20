@@ -67,7 +67,7 @@ cd <NOME_DO_DIRETORIO>
  -   Visualização detalhada de itens.
  -   Adição, edição e remoção de itens.
 
-<small>Os gráficos e cards da Home são apenas para a estética do projeto, servindo apenas como um protótipo, no momento, apenas os itens acima estão funcionais!</small>
+<small>Os gráficos e cards da Home são apenas para a estética do projeto, servindo apenas como um protótipo no momento, apenas os itens acima são funcionais!</small>
 
 ### Versão desktop:
 
