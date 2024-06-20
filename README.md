@@ -63,9 +63,11 @@ cd <NOME_DO_DIRETORIO>
 -   Banco de Dados Simulado: Utilização do json-server para simular uma API RESTful com um banco de dados JSON.
 
 -   Funcionalidades Implementadas:
--   Listagem de itens.
--   Visualização detalhada de itens.
--   Adição, edição e remoção de itens.
+ -   Listagem de itens.
+ -   Visualização detalhada de itens.
+ -   Adição, edição e remoção de itens.
+
+<small>Os gráficos e cards da Home são apenas para a estética do projeto, servindo apenas como um protótipo, no momento, apenas os itens acima estão funcionais!</small>
 
 ### Versão desktop:
 
